@@ -1,0 +1,30 @@
+{% extends 'quiz_app/home.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>{{ quiz.title }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for question in questions %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ question.text }}</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question_{{ question.id }}" value="op1" required>
+                    <label class="form-check-label">{{ question.op1 }}</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question_{{ question.id }}" value="op2" required>
+                    <label class="form-check-label">{{ question.op2 }}</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question_{{ question.id }}" value="op3" required>
+                    <label class="form-check-label">{{ question.op3 }}</label>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

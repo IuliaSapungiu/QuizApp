@@ -1,0 +1,15 @@
+.navbar-brand {
+    padding-right: 100px; /* Adjust as needed */
+    padding-left: 100px; /* Adjust as needed */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.nav-item {
+    margin: 0 40px; /* Adjust this value as needed for spacing */
+}
+

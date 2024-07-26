@@ -1,0 +1,54 @@
+{% extends 'quiz_app/home.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">Add Question to "{{ quiz.title }}"</h2>
+            <form method="post">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label for="{{ form.text.id_for_label }}" class="form-label">Question Text</label>
+                    {{ form.text }}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.op1.id_for_label }}" class="form-label">Option 1</label>
+                    {{ form.op1 }}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.op2.id_for_label }}" class="form-label">Option 2</label>
+                    {{ form.op2 }}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.op3.id_for_label }}" class="form-label">Option 3</label>
+                    {{ form.op3 }}
+                </div>
+
+                <div class="mb-3">
+                    <label for="{{ form.answer.id_for_label }}" class="form-label">Correct Answer</label>
+                    {{ form.answer }}
+                </div>
+
+                {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="d-grid gap-2">
+                    <button type="submit" name="add_another" class="btn btn-primary">Save and Add Another</button>
+                    <button type="submit" class="btn btn-success">Save and Finish</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
