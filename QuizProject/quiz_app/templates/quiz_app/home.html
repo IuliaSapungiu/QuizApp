@@ -35,7 +35,7 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'user_quizzes' %}" style="color: #ffffff;">My Quizzes</a>
+                    <a href="{% url 'user_quizzes_with_takers' %}" class="nav-link" style="color: #ffffff;">Results</a>
                 </li>
                 {% endif %}
                 <!-- </li>

@@ -1,0 +1,24 @@
+{% extends 'quiz_app/home.html' %}
+
+{% block content %}
+<h2>My Quizzes and Their Takers</h2>
+{% for quiz in quizzes %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ quiz.title }}</h5>
+            <p class="card-text">Created on: {{ quiz.created_at }}</p>
+            <h6>Takers:</h6>
+            <ul>
+            {% for taker in quiz.takers.all %}
+                <li>{{ taker.username }} - {{ taker.email }}</li>
+            {% empty %}
+                <li>No one has taken this quiz yet.</li>
+            {% endfor %}
+            </ul>
+            <a href="{% url 'quiz_detail' quiz.id %}" class="btn btn-primary">View Quiz</a>
+        </div>
+    </div>
+{% empty %}
+    <p>You haven't created any quizzes yet.</p>
+{% endfor %}
+{% endblock %}

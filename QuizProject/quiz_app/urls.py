@@ -2,8 +2,8 @@ from django.urls import path
 from quiz_app import views
 
 urlpatterns = [
+    path('my-quizzes-with-takers/', views.user_quizzes_with_takers, name='user_quizzes_with_takers'),
     path('copy_link/<int:quiz_id>/', views.copy_link, name='copy_link'),
-    path('my-quizzes/', views.user_quizzes, name='user_quizzes'),
     path('take_quiz/<int:quiz_id>/', views.take_quiz, name='take_quiz'),
     path('all_quizzes/', views.all_quizzes, name='all_quizzes'),
     path('quiz/<int:quiz_id>/', views.quiz_detail, name='quiz_detail'),

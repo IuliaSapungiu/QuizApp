@@ -124,6 +124,9 @@ def take_quiz(request, quiz_id):
             submitted_answer = request.POST.get(f'question_{question.id}')
             if submitted_answer == question.answer:
                 score += 1
+
+        quiz.takers.add(request.user)
+
         return render(request, 'quiz_app/quiz_result.html', {
             'quiz': quiz,
             'score': score,
@@ -132,10 +135,6 @@ def take_quiz(request, quiz_id):
     
     return render(request, 'quiz_app/take_quiz.html', {'quiz': quiz, 'questions': questions})
 
-@login_required
-def user_quizzes(request):
-    quizzes = Quiz.objects.filter(creator=request.user).order_by('-created_at')
-    return render(request, 'quiz_app/user_quizzes.html', {'quizzes': quizzes})
 
 def copy_link(request, quiz_id):
     if request.method == 'POST':
@@ -144,5 +143,8 @@ def copy_link(request, quiz_id):
     return redirect('quiz_detail', quiz_id=quiz_id)
 
 
-
+@login_required
+def user_quizzes_with_takers(request):
+    quizzes = Quiz.objects.filter(creator=request.user).prefetch_related('takers').order_by('-created_at')
+    return render(request, 'quiz_app/user_quizzes_with_takers.html', {'quizzes': quizzes})
 
