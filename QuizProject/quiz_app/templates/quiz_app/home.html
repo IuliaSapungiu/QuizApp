@@ -33,16 +33,10 @@
                 <li class="nav-item">
                 <a class="nav-link" href="{% url 'all_quizzes' %}" style="color: #ffffff;">All Quizzes</a>
                 </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a href="{% url 'user_quizzes_with_takers' %}" class="nav-link" style="color: #ffffff;">Results</a>
-                </li>
-                {% endif %}
-                <!-- </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" href="#" style="color: #cccccc;">Try it yourself!</a>
-                </li> -->
             </ul>
+            {% if user.is_authenticated %}
+            <a href="{% url 'user_quizzes_with_takers' %}" class="navbar-brand mb-0 h1" style="color: #ffffff;">Results</a>
+            {% endif %}
             </div>
         </div>
     </nav>
