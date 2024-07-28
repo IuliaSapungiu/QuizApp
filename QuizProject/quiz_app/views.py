@@ -11,11 +11,6 @@ from django.http import HttpResponse
 def home (request):
     return render (request, 'quiz_app/home.html',)
 
-# def home(request):
-#     if request.user.is_authenticated:
-#         return redirect('user_quizzes')
-#     return render(request, 'quiz_app/home.html')
-
 def register(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']
