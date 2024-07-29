@@ -120,7 +120,9 @@ def take_quiz(request, quiz_id):
             if submitted_answer == question.answer:
                 score += 1
 
-        quiz.takers.add(request.user)
+        if request.user.is_authenticated:
+            quiz.takers.add(request.user)
+        # quiz.takers.add(request.user)
 
         return render(request, 'quiz_app/quiz_result.html', {
             'quiz': quiz,
