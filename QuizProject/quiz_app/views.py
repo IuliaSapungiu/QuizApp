@@ -85,7 +85,7 @@ def create_quiz(request):
 def add_question(request, quiz_id):
     quiz = Quiz.objects.get(id=quiz_id)
     if request.method == 'POST':
-        form = QuestionForm(request.POST)
+        form = QuestionForm(request.POST) 
         if form.is_valid():
             question = form.save(commit=False)
             question.quiz = quiz
