@@ -1,7 +1,7 @@
-# QuizApp
+# QuizApp 💻
 ###### This is a documentation regarding the project I've created.
 
-## Table of contents
+## Table of contents 
 
  - [Project Overview](#project-overview)
  - [Features](#features)
@@ -36,16 +36,16 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 
 ### Installation
 
-1. Clone the repository: git clone https://github.com/your-username/quizapp.git
-2. Navigate to the project directory: cd quizapp
-3. Create a virtual environment: python -m venv env_name
+1. Clone the repository: **git clone https://github.com/your-username/quizapp.git**
+2. Navigate to the project directory: **cd quizapp**
+3. Create a virtual environment: **python -m venv env_name**
 4. Activate the virtual environment:
-   - On Windows:
+-  **On Windows:**
   
   ```
   source env_name\Scripts\activate
   ```
-   - On macOS and Linux:
+   - **On macOS and Linux:**
 
   ```
   source env_name/bin/activate
@@ -111,6 +111,5 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 
 
 ![quizzes with takers](https://github.com/user-attachments/assets/c2fb97b4-3b4d-4e53-95dd-2c59432d1a94)
-
 
 ### Project Structure
