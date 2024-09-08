@@ -1,4 +1,4 @@
-![Screenshot (67)](https://github.com/user-attachments/assets/6b585e91-1b39-4990-bff7-d6bab1f23227)# QuizApp
+# QuizApp
 ###### This is a documentation regarding the project I've created.
 
 ## Table of contents
