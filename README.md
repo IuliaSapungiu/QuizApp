@@ -5,7 +5,7 @@
 
  - [Project Overview](#project-overview)
  - [Features](#features)
- - [Tools](#tools)
+ - [Technologies](#technologies)
  - [Installation](#installation)
  - [Usage](#usage)
  - [Project Structure](#project-structure)
@@ -26,7 +26,7 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 - Results Tracking: Quiz creators can see who has taken their quizzes;
 - Quiz Sharing: Users can share quiz links with others.
 
-### Tools
+### Technologies
 
 - Python 3.x
 - Django 3.x
@@ -113,3 +113,28 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 ![quizzes with takers](https://github.com/user-attachments/assets/c2fb97b4-3b4d-4e53-95dd-2c59432d1a94)
 
 ### Project Structure
+
+```
+quizapp/
+├── quiz_app/
+│   ├── migrations/
+│   ├── static/
+│   ├── templates/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── quizapp/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── requirements.txt
+└── README.md
+```
