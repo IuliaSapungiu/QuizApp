@@ -6,6 +6,7 @@
  - [Project Overview](#project-overview)
  - [Features](#features)
  - [Tools](#tools)
+ - [Installation](#installation)
  - [Usage](#usage)
 
 
@@ -31,6 +32,41 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 - HTML/CSS
 - Bootstrap 5
 - SQLite (default Django database)
+
+### Installation
+
+1. Clone the repository: git clone https://github.com/your-username/quizapp.git
+2. Navigate to the project directory: cd quizapp
+3. Create a virtual environment: python -m venv your_env_name
+4. Activate the virtual environment:
+   - On Windows:
+  
+  ```
+  venv\Scripts\activate
+  ```
+   - On macOS and Linux:
+
+  ```
+  source venv/bin/activate
+  ```
+
+5. Install the required packages:
+   ```
+    pip install -r requirements.txt
+   ```
+6. Run database migrations:
+   ```
+   python manage.py migrate
+   ```
+7. Create a superuser (admin):
+   ```
+   python manage.py createsuperuser
+   ```
+8. Start the development server:
+   ```
+   python manage.py runserver
+   ```
+9. Open a web browser and go to `http://localhost:8000` to view the application.
 
 ### Usage
 
