@@ -1,4 +1,4 @@
-# QuizApp
+![Screenshot (67)](https://github.com/user-attachments/assets/6b585e91-1b39-4990-bff7-d6bab1f23227)# QuizApp
 ###### This is a documentation regarding the project I've created.
 
 ## Table of contents
@@ -12,6 +12,9 @@
 ### Project Overview
 
 QuizApp is a Python-Django-based web application that allows users to create, share, and take quizzes. It provides a platform for users to test their knowledge on various topics and share quizzes with others.
+
+![Screenshot (67)](https://github.com/user-attachments/assets/75275698-61dd-40df-852e-200039bd579a)
+
 
 ### Features
 
