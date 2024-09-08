@@ -8,6 +8,7 @@
  - [Tools](#tools)
  - [Installation](#installation)
  - [Usage](#usage)
+ - [Project Structure](#project-structure)
 
 
 ### Project Overview
@@ -112,4 +113,4 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 ![quizzes with takers](https://github.com/user-attachments/assets/c2fb97b4-3b4d-4e53-95dd-2c59432d1a94)
 
 
-
+### Project Structure
