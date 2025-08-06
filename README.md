@@ -115,7 +115,7 @@ QuizApp is a Python-Django-based web application that allows users to create, sh
 ### Project Structure
 
 ```
-quizapp/
+quizproject/
 ├── quiz_app/
 │   ├── migrations/
 │   ├── static/
@@ -128,7 +128,7 @@ quizapp/
 │   ├── tests.py
 │   ├── urls.py
 │   └── views.py
-├── quizapp/
+├── quizproject/
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
